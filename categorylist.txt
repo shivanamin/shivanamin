@@ -1,0 +1,11 @@
+define category CLIENT_NO_AUTH
+123.123.123.123
+ms.com
+www.google.com
+end
+define category DO NOT CACHE
+end
+define category NO_AUTH
+end
+define category RISK_BASED
+end
