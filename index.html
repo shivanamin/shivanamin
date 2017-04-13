@@ -8,6 +8,11 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none;}
+</style>
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
@@ -42,7 +47,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
             <img src="djpårisburręn (1).png" alt="djpårisburręn (1).png" style="width:400px;height:400;">
           </div>                     
           <div id="right" style="float:right; width:50%;"> 
-                <h1 class="w3-margin w3-jumbo">TEMP</h1>
+            <div class="w3-content w3-section" style="max-width:600px">
+                <img class="mySlides" src="img_la.jpg" style="width:100%">
+                <img class="mySlides" src="img_ny.jpg" style="width:100%">
+                <img class="mySlides" src="img_chicago.jpg" style="width:100%">
+             </div>
           </div>                   
       </div>                       
 </header>
@@ -102,7 +111,22 @@ function myFunction() {
     }
 }
 </script>
+<script>
+var myIndex = 0;
+carousel();
 
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
 </body>
 </html>
 
